@@ -50,7 +50,18 @@ export default function Layout({children, title, description, home}) {
                     )}
             </header>
             <nav>
-                Navbar
+                <Link href="/">
+                    <a>Inicio |</a>    
+                </Link>
+                <Link href="/contact">
+                    <a>Contacto |</a>    
+                </Link>
+                <Link href="/about">
+                    <a>About |</a>    
+                </Link>
+                <Link href="/blog">
+                    <a>Blog |</a>    
+                </Link>
             </nav>
             <main>
                 {children}
