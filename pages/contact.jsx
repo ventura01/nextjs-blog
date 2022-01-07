@@ -5,7 +5,7 @@ export default function contact() {
         <Layout
         title='Next JS | Contacto'
         description='Seccion contacto'>
-            <h1>Contact</h1>
+            <h1>Contacto</h1>
         </Layout>
     )
 }

@@ -4,7 +4,7 @@ import utilStyles from '../styles/utils.module.css'
 import styles from '../styles/Layout.module.css'
 import Image from "next/image"
 
-const name = 'Picky'
+const name = 'Picky Store'
 
 export default function Layout({children, title, description, home}) {
     return (
@@ -30,21 +30,21 @@ export default function Layout({children, title, description, home}) {
                     ) : (
                     <>
                         <Link href="/">
-                        <a>
-                            <Image
-                            priority
-                            src="/img/1.jpg"
-                            className={utilStyles.borderCircle}
-                            height={108}
-                            width={108}
-                            alt={name}
-                            />
-                        </a>
+                            <a>
+                                <Image
+                                priority
+                                src="/img/1.jpg"
+                                className={utilStyles.borderCircle}
+                                height={108}
+                                width={108}
+                                alt={name}
+                                />
+                            </a>
                         </Link>
                         <h2 className={utilStyles.headingLg}>
-                        <Link href="/">
-                            <a className={utilStyles.colorInherit}>{name}</a>
-                        </Link>
+                            <Link href="/">
+                                <a className={utilStyles.colorInherit}>{name}</a>
+                            </Link>
                         </h2>
                     </>
                     )}
@@ -67,7 +67,13 @@ export default function Layout({children, title, description, home}) {
                 {children}
             </main>
             <footer>
-                Footer
+                {!home && (
+                    <div className={styles.backToHome}>
+                    <Link href="/">
+                        <a>← Back to home</a>
+                    </Link>
+                    </div>
+                )}
             </footer>
         </div>
     )
