@@ -2,7 +2,10 @@ import Layout from '../../components/Layout'
 
 export default function primerPost({data}) {
     return (
-        <Layout>
+        <Layout
+        title= {`Next JS | Post ${data.id}`}
+        description='Seccion Post'
+        >
             <h1>{data.id} - {data.title}</h1>
             <p>{data.body}</p>
             

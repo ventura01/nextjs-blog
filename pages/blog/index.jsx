@@ -3,7 +3,10 @@ import Layout from '../../components/Layout'
 
 export default function index({data}) {
     return (
-        <Layout>
+        <Layout
+        title='Next JS | Blog'
+        description='Seccion Blog'
+        >
             <h1>Lista de posts</h1>
             {data.map(({id, title, body}) => (
                 <div key={id}>
